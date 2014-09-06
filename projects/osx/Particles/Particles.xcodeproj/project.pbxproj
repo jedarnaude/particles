@@ -20,6 +20,10 @@
 		ADBBEAB219BB747C0058A909 /* ParticleData.h in Headers */ = {isa = PBXBuildFile; fileRef = ADBBEAA219BB6D030058A909 /* ParticleData.h */; };
 		ADBBEAB519BB7D820058A909 /* libgmock_main.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBEAB319BB7D820058A909 /* libgmock_main.a */; };
 		ADBBEAB619BB7D820058A909 /* libgmock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBEAB419BB7D820058A909 /* libgmock.a */; };
+		ADBBEABB19BB8DAF0058A909 /* ParticleRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = ADBBEABA19BB8DAF0058A909 /* ParticleRenderer.h */; };
+		ADBBEAC019BB8F080058A909 /* GL3ParticleRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEABF19BB8F080058A909 /* GL3ParticleRenderer.cpp */; };
+		ADBBEAC219BB8F6D0058A909 /* GL3ParticleRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = ADBBEAC119BB8F6D0058A909 /* GL3ParticleRenderer.h */; };
+		ADBBEAC419BB90AB0058A909 /* ParticleRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEAC319BB90AB0058A909 /* ParticleRenderer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,10 @@
 		ADBBEAAB19BB74440058A909 /* ParticleEmitterTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleEmitterTest.cpp; sourceTree = "<group>"; };
 		ADBBEAB319BB7D820058A909 /* libgmock_main.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgmock_main.a; path = ../../../extern/bin/osx/libgmock_main.a; sourceTree = "<group>"; };
 		ADBBEAB419BB7D820058A909 /* libgmock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgmock.a; path = ../../../extern/bin/osx/libgmock.a; sourceTree = "<group>"; };
+		ADBBEABA19BB8DAF0058A909 /* ParticleRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleRenderer.h; sourceTree = "<group>"; };
+		ADBBEABF19BB8F080058A909 /* GL3ParticleRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GL3ParticleRenderer.cpp; sourceTree = "<group>"; };
+		ADBBEAC119BB8F6D0058A909 /* GL3ParticleRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GL3ParticleRenderer.h; sourceTree = "<group>"; };
+		ADBBEAC319BB90AB0058A909 /* ParticleRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleRenderer.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,8 +146,10 @@
 		ADBBEA5419BB32E10058A909 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				ADBBEABE19BB8EC40058A909 /* GL */,
 				ADBBEA5E19BB3B7E0058A909 /* ParticleData.cpp */,
 				ADBBEAA319BB710D0058A909 /* ParticleSystem.cpp */,
+				ADBBEAC319BB90AB0058A909 /* ParticleRenderer.cpp */,
 			);
 			name = src;
 			path = ../../../src;
@@ -150,6 +160,7 @@
 			children = (
 				ADBBEAA219BB6D030058A909 /* ParticleData.h */,
 				ADBBEA9B19BB6C650058A909 /* ParticleSystem.h */,
+				ADBBEABA19BB8DAF0058A909 /* ParticleRenderer.h */,
 			);
 			name = include;
 			path = ../../../include;
@@ -186,6 +197,15 @@
 			name = sample;
 			sourceTree = "<group>";
 		};
+		ADBBEABE19BB8EC40058A909 /* GL */ = {
+			isa = PBXGroup;
+			children = (
+				ADBBEABF19BB8F080058A909 /* GL3ParticleRenderer.cpp */,
+				ADBBEAC119BB8F6D0058A909 /* GL3ParticleRenderer.h */,
+			);
+			path = GL;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -193,6 +213,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADBBEAC219BB8F6D0058A909 /* GL3ParticleRenderer.h in Headers */,
+				ADBBEABB19BB8DAF0058A909 /* ParticleRenderer.h in Headers */,
 				ADBBEAB219BB747C0058A909 /* ParticleData.h in Headers */,
 				ADBBEA9C19BB6C650058A909 /* ParticleSystem.h in Headers */,
 			);
@@ -299,6 +321,8 @@
 			files = (
 				ADBBEAA519BB710D0058A909 /* ParticleSystem.cpp in Sources */,
 				ADBBEA8D19BB4BE90058A909 /* ParticleData.cpp in Sources */,
+				ADBBEAC019BB8F080058A909 /* GL3ParticleRenderer.cpp in Sources */,
+				ADBBEAC419BB90AB0058A909 /* ParticleRenderer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
