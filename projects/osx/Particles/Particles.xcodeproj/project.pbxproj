@@ -14,6 +14,7 @@
 		ADBBEA8E19BB4BEC0058A909 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEA5619BB33370058A909 /* main.cpp */; };
 		ADBBEA8F19BB4BF90058A909 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBEA5919BB341B0058A909 /* SDL2.framework */; };
 		ADBBEA9019BB4BFC0058A909 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBEA5B19BB345C0058A909 /* OpenGL.framework */; };
+		ADBBEA9619BB56440058A909 /* libparticles.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBEA7C19BB4BC20058A909 /* libparticles.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADBBEA9619BB56440058A909 /* libparticles.a in Frameworks */,
 				ADBBEA7619BB49F50058A909 /* libgtest_main.a in Frameworks */,
 				ADBBEA7719BB49F50058A909 /* libgtest.a in Frameworks */,
 			);

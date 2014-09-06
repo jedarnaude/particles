@@ -7,7 +7,6 @@ struct ParticleDataTest : public ::testing::Test {
 		: data(10) {
 	}
 	
-	size_t size;
 	ParticleData data;
 };
 
@@ -28,22 +27,24 @@ TEST_F(ParticleDataTest, Generate) {
 
 TEST_F(ParticleDataTest, Wake) {
 	// Wake once
-	size_t count = data.Wake(4);
-	for (size_t i = data.count; i < count; ++i) {
+	size_t count = 4;
+	data.Wake(count);
+	for (size_t i = 0; i < count; ++i) {
 		EXPECT_TRUE(data.alive[i]);
 	}
-	for (size_t i = data.count; i < size; ++i) {
+	for (size_t i = data.count; i < data.size; ++i) {
 		EXPECT_FALSE(data.alive[i]);
 	}
     EXPECT_EQ(count, data.count);
     EXPECT_EQ(10, data.size);
 	
 	// Wake again
-	count += data.Wake(2);
-	for (size_t i = data.count; i < count; ++i) {
+	count += 2;
+	data.Wake(2);
+	for (size_t i = 0; i < count; ++i) {
 		EXPECT_TRUE(data.alive[i]);
 	}
-	for (size_t i = data.count; i < size; ++i) {
+	for (size_t i = data.count; i < data.size; ++i) {
 		EXPECT_FALSE(data.alive[i]);
 	}
     EXPECT_EQ(count, data.count);
