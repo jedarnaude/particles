@@ -14,8 +14,9 @@ void ResizeVector(T& obj, size_t size) {
 
 }
 
-ParticleData::ParticleData(size_t size) {
-	Generate(size);
+ParticleData::ParticleData()
+	: size(0)
+	, count(0) {
 }
 
 void ParticleData::Generate(size_t size) {

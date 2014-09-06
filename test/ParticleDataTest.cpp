@@ -1,10 +1,9 @@
 #include "gmock/gmock.h"
-
 #include "ParticleData.h"
 
 struct ParticleDataTest : public ::testing::Test {
-	ParticleDataTest()
-		: data(10) {
+	ParticleDataTest() {
+		data.Generate(10);
 	}
 	
 	ParticleData data;
