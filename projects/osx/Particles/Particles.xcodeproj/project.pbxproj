@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		ADBBEA7319BB46730058A909 /* ParticleDataTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEA7119BB46730058A909 /* ParticleDataTest.cpp */; };
-		ADBBEA7619BB49F50058A909 /* libgtest_main.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBEA7419BB49F50058A909 /* libgtest_main.a */; };
-		ADBBEA7719BB49F50058A909 /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBEA7519BB49F50058A909 /* libgtest.a */; };
 		ADBBEA8D19BB4BE90058A909 /* ParticleData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEA5E19BB3B7E0058A909 /* ParticleData.cpp */; };
-		ADBBEA8E19BB4BEC0058A909 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEA5619BB33370058A909 /* main.cpp */; };
 		ADBBEA8F19BB4BF90058A909 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBEA5919BB341B0058A909 /* SDL2.framework */; };
 		ADBBEA9019BB4BFC0058A909 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBEA5B19BB345C0058A909 /* OpenGL.framework */; };
 		ADBBEA9619BB56440058A909 /* libparticles.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBEA7C19BB4BC20058A909 /* libparticles.a */; };
+		ADBBEA9A19BB68C50058A909 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEA9919BB68C50058A909 /* main.cpp */; };
+		ADBBEA9C19BB6C650058A909 /* ParticleSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = ADBBEA9B19BB6C650058A909 /* ParticleSystem.h */; };
+		ADBBEAA519BB710D0058A909 /* ParticleSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEAA319BB710D0058A909 /* ParticleSystem.cpp */; };
+		ADBBEAB019BB74730058A909 /* ParticleEmitterTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEAAB19BB74440058A909 /* ParticleEmitterTest.cpp */; };
+		ADBBEAB119BB74730058A909 /* ParticleSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEAA719BB73F20058A909 /* ParticleSystem.cpp */; };
+		ADBBEAB219BB747C0058A909 /* ParticleData.h in Headers */ = {isa = PBXBuildFile; fileRef = ADBBEAA219BB6D030058A909 /* ParticleData.h */; };
+		ADBBEAB519BB7D820058A909 /* libgmock_main.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBEAB319BB7D820058A909 /* libgmock_main.a */; };
+		ADBBEAB619BB7D820058A909 /* libgmock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBEAB419BB7D820058A909 /* libgmock.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,18 +61,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		ADBBEA5619BB33370058A909 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		ADBBEA5919BB341B0058A909 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = /Library/Frameworks/SDL2.framework; sourceTree = "<absolute>"; };
 		ADBBEA5B19BB345C0058A909 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		ADBBEA5D19BB35E60058A909 /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Context.h; sourceTree = "<group>"; };
 		ADBBEA5E19BB3B7E0058A909 /* ParticleData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleData.cpp; sourceTree = "<group>"; };
-		ADBBEA5F19BB3B7E0058A909 /* ParticleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleData.h; sourceTree = "<group>"; };
 		ADBBEA6619BB457B0058A909 /* particles.test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = particles.test; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBBEA7119BB46730058A909 /* ParticleDataTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleDataTest.cpp; sourceTree = "<group>"; };
 		ADBBEA7419BB49F50058A909 /* libgtest_main.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest_main.a; path = ../../../extern/bin/gtest/libgtest_main.a; sourceTree = "<group>"; };
 		ADBBEA7519BB49F50058A909 /* libgtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest.a; path = ../../../extern/bin/gtest/libgtest.a; sourceTree = "<group>"; };
 		ADBBEA7C19BB4BC20058A909 /* libparticles.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libparticles.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBBEA8419BB4BD70058A909 /* particles.sample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = particles.sample; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADBBEA9819BB68C50058A909 /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Context.h; path = ../../../sample/Context.h; sourceTree = "<group>"; };
+		ADBBEA9919BB68C50058A909 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../../sample/main.cpp; sourceTree = "<group>"; };
+		ADBBEA9B19BB6C650058A909 /* ParticleSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleSystem.h; sourceTree = "<group>"; };
+		ADBBEAA219BB6D030058A909 /* ParticleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleData.h; sourceTree = "<group>"; };
+		ADBBEAA319BB710D0058A909 /* ParticleSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleSystem.cpp; sourceTree = "<group>"; };
+		ADBBEAA719BB73F20058A909 /* ParticleSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleSystem.cpp; sourceTree = "<group>"; };
+		ADBBEAAB19BB74440058A909 /* ParticleEmitterTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleEmitterTest.cpp; sourceTree = "<group>"; };
+		ADBBEAB319BB7D820058A909 /* libgmock_main.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgmock_main.a; path = ../../../extern/bin/osx/libgmock_main.a; sourceTree = "<group>"; };
+		ADBBEAB419BB7D820058A909 /* libgmock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgmock.a; path = ../../../extern/bin/osx/libgmock.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,9 +86,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADBBEAB519BB7D820058A909 /* libgmock_main.a in Frameworks */,
+				ADBBEAB619BB7D820058A909 /* libgmock.a in Frameworks */,
 				ADBBEA9619BB56440058A909 /* libparticles.a in Frameworks */,
-				ADBBEA7619BB49F50058A909 /* libgtest_main.a in Frameworks */,
-				ADBBEA7719BB49F50058A909 /* libgtest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +114,9 @@
 		ADBBEA3F19BB32930058A909 = {
 			isa = PBXGroup;
 			children = (
+				ADBBEAB319BB7D820058A909 /* libgmock_main.a */,
+				ADBBEAB419BB7D820058A909 /* libgmock.a */,
+				ADBBEA9719BB68A20058A909 /* sample */,
 				ADBBEA9119BB4C0F0058A909 /* libraries */,
 				ADBBEA4919BB32930058A909 /* Products */,
 				ADBBEA5519BB32EB0058A909 /* include */,
@@ -124,10 +138,8 @@
 		ADBBEA5419BB32E10058A909 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				ADBBEA5619BB33370058A909 /* main.cpp */,
-				ADBBEA5D19BB35E60058A909 /* Context.h */,
 				ADBBEA5E19BB3B7E0058A909 /* ParticleData.cpp */,
-				ADBBEA5F19BB3B7E0058A909 /* ParticleData.h */,
+				ADBBEAA319BB710D0058A909 /* ParticleSystem.cpp */,
 			);
 			name = src;
 			path = ../../../src;
@@ -136,6 +148,8 @@
 		ADBBEA5519BB32EB0058A909 /* include */ = {
 			isa = PBXGroup;
 			children = (
+				ADBBEAA219BB6D030058A909 /* ParticleData.h */,
+				ADBBEA9B19BB6C650058A909 /* ParticleSystem.h */,
 			);
 			name = include;
 			path = ../../../include;
@@ -144,7 +158,9 @@
 		ADBBEA6119BB3DDD0058A909 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				ADBBEAAB19BB74440058A909 /* ParticleEmitterTest.cpp */,
 				ADBBEA7119BB46730058A909 /* ParticleDataTest.cpp */,
+				ADBBEAA719BB73F20058A909 /* ParticleSystem.cpp */,
 			);
 			name = test;
 			path = ../../../test;
@@ -161,6 +177,15 @@
 			name = libraries;
 			sourceTree = "<group>";
 		};
+		ADBBEA9719BB68A20058A909 /* sample */ = {
+			isa = PBXGroup;
+			children = (
+				ADBBEA9819BB68C50058A909 /* Context.h */,
+				ADBBEA9919BB68C50058A909 /* main.cpp */,
+			);
+			name = sample;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -168,6 +193,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADBBEAB219BB747C0058A909 /* ParticleData.h in Headers */,
+				ADBBEA9C19BB6C650058A909 /* ParticleSystem.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +287,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADBBEAB019BB74730058A909 /* ParticleEmitterTest.cpp in Sources */,
 				ADBBEA7319BB46730058A909 /* ParticleDataTest.cpp in Sources */,
+				ADBBEAB119BB74730058A909 /* ParticleSystem.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADBBEAA519BB710D0058A909 /* ParticleSystem.cpp in Sources */,
 				ADBBEA8D19BB4BE90058A909 /* ParticleData.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,7 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADBBEA8E19BB4BEC0058A909 /* main.cpp in Sources */,
+				ADBBEA9A19BB68C50058A909 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +420,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/jedarnaude/Workspace/personal/particles/extern/bin/gtest,
+					/Users/jedarnaude/Workspace/personal/particles/extern/bin/osx,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "../../../extern/glm ../../../extern/gmock/include ../../../extern/gmock/gtest/include ../../../include ../../../src";
@@ -406,6 +437,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/jedarnaude/Workspace/personal/particles/extern/bin/gtest,
+					/Users/jedarnaude/Workspace/personal/particles/extern/bin/osx,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "../../../extern/glm ../../../extern/gmock/include ../../../extern/gmock/gtest/include ../../../include ../../../src";
