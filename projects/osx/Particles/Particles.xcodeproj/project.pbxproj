@@ -8,22 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		ADBBEA7319BB46730058A909 /* ParticleDataTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEA7119BB46730058A909 /* ParticleDataTest.cpp */; };
-		ADBBEA8D19BB4BE90058A909 /* ParticleData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEA5E19BB3B7E0058A909 /* ParticleData.cpp */; };
 		ADBBEA8F19BB4BF90058A909 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBEA5919BB341B0058A909 /* SDL2.framework */; };
 		ADBBEA9019BB4BFC0058A909 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBEA5B19BB345C0058A909 /* OpenGL.framework */; };
 		ADBBEA9619BB56440058A909 /* libparticles.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBEA7C19BB4BC20058A909 /* libparticles.a */; };
 		ADBBEA9A19BB68C50058A909 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEA9919BB68C50058A909 /* main.cpp */; };
 		ADBBEA9C19BB6C650058A909 /* ParticleSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = ADBBEA9B19BB6C650058A909 /* ParticleSystem.h */; };
-		ADBBEAA519BB710D0058A909 /* ParticleSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEAA319BB710D0058A909 /* ParticleSystem.cpp */; };
 		ADBBEAB019BB74730058A909 /* ParticleEmitterTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEAAB19BB74440058A909 /* ParticleEmitterTest.cpp */; };
 		ADBBEAB119BB74730058A909 /* ParticleSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEAA719BB73F20058A909 /* ParticleSystem.cpp */; };
 		ADBBEAB219BB747C0058A909 /* ParticleData.h in Headers */ = {isa = PBXBuildFile; fileRef = ADBBEAA219BB6D030058A909 /* ParticleData.h */; };
 		ADBBEAB519BB7D820058A909 /* libgmock_main.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBEAB319BB7D820058A909 /* libgmock_main.a */; };
 		ADBBEAB619BB7D820058A909 /* libgmock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBEAB419BB7D820058A909 /* libgmock.a */; };
 		ADBBEABB19BB8DAF0058A909 /* ParticleRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = ADBBEABA19BB8DAF0058A909 /* ParticleRenderer.h */; };
-		ADBBEAC019BB8F080058A909 /* GL3ParticleRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEABF19BB8F080058A909 /* GL3ParticleRenderer.cpp */; };
-		ADBBEAC219BB8F6D0058A909 /* GL3ParticleRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = ADBBEAC119BB8F6D0058A909 /* GL3ParticleRenderer.h */; };
-		ADBBEAC419BB90AB0058A909 /* ParticleRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEAC319BB90AB0058A909 /* ParticleRenderer.cpp */; };
+		ADBBEAC519BB96700058A909 /* GL3ParticleRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEABF19BB8F080058A909 /* GL3ParticleRenderer.cpp */; };
+		ADBBEAC619BB96700058A909 /* GL3ParticleRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = ADBBEAC119BB8F6D0058A909 /* GL3ParticleRenderer.h */; };
+		ADBBEAC719BB96700058A909 /* ParticleData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEA5E19BB3B7E0058A909 /* ParticleData.cpp */; };
+		ADBBEAC819BB96700058A909 /* ParticleSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEAA319BB710D0058A909 /* ParticleSystem.cpp */; };
+		ADBBEAC919BB96700058A909 /* ParticleRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEAC319BB90AB0058A909 /* ParticleRenderer.cpp */; };
+		ADBBEACA19BB96FF0058A909 /* libparticles.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBEA7C19BB4BC20058A909 /* libparticles.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADBBEACA19BB96FF0058A909 /* libparticles.a in Frameworks */,
 				ADBBEA8F19BB4BF90058A909 /* SDL2.framework in Frameworks */,
 				ADBBEA9019BB4BFC0058A909 /* OpenGL.framework in Frameworks */,
 			);
@@ -213,7 +215,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADBBEAC219BB8F6D0058A909 /* GL3ParticleRenderer.h in Headers */,
+				ADBBEAC619BB96700058A909 /* GL3ParticleRenderer.h in Headers */,
 				ADBBEABB19BB8DAF0058A909 /* ParticleRenderer.h in Headers */,
 				ADBBEAB219BB747C0058A909 /* ParticleData.h in Headers */,
 				ADBBEA9C19BB6C650058A909 /* ParticleSystem.h in Headers */,
@@ -319,10 +321,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADBBEAA519BB710D0058A909 /* ParticleSystem.cpp in Sources */,
-				ADBBEA8D19BB4BE90058A909 /* ParticleData.cpp in Sources */,
-				ADBBEAC019BB8F080058A909 /* GL3ParticleRenderer.cpp in Sources */,
-				ADBBEAC419BB90AB0058A909 /* ParticleRenderer.cpp in Sources */,
+				ADBBEAC919BB96700058A909 /* ParticleRenderer.cpp in Sources */,
+				ADBBEAC519BB96700058A909 /* GL3ParticleRenderer.cpp in Sources */,
+				ADBBEAC719BB96700058A909 /* ParticleData.cpp in Sources */,
+				ADBBEAC819BB96700058A909 /* ParticleSystem.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

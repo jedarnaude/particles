@@ -2,6 +2,12 @@
 
 #include "ParticleData.h"
 
+struct Transform {
+	glm::vec3 position;
+	glm::vec3 rotation;
+	glm::vec3 scale;
+};
+
 class ParticleGenerator {
 public:
 	virtual ~ParticleGenerator() = default;
@@ -16,17 +22,20 @@ public:
 
 class ParticleEmitter {
 public:
+	float rate;
+	
+public:
 	void Emit(double dt, ParticleData& particles);
 	void Add(std::unique_ptr<ParticleGenerator>&& generator);
 
-public:
-	float rate;
-	
 private:
 	std::vector<std::unique_ptr<ParticleGenerator>> generators_;
 };
 
 class ParticleSystem {
+public:
+	Transform transform;
+
 public:
 	explicit ParticleSystem(size_t max_particles);
 		
