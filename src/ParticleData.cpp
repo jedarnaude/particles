@@ -12,6 +12,12 @@ void ResizeVector(T& obj, size_t size) {
 	obj.shrink_to_fit();
 }
 
+template<typename T>
+size_t STLMemory(T& obj) {
+	using Type = typename T::value_type;
+	return obj.capacity() * sizeof(Type);
+}
+
 }
 
 ParticleData::ParticleData()
@@ -58,4 +64,14 @@ void ParticleData::Swap(size_t left, size_t right) {
 	std::swap(acceleration[left],	acceleration[right]);
 	std::swap(color[left],			color[right]);
 	std::swap(alive[left],			alive[right]);
+}
+
+size_t ParticleData::GetMemory(const ParticleData& system) {
+	size_t size = sizeof(system);
+	size += STLMemory(system.position);
+	size += STLMemory(system.velocity);
+	size += STLMemory(system.acceleration);
+	size += STLMemory(system.color);
+	size += STLMemory(system.alive);
+	return size;
 }

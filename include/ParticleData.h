@@ -20,6 +20,8 @@ public:
 	size_t Wake(size_t count);
 	void Kill(size_t id);
 
+	static size_t GetMemory(const ParticleData& system);
+
 private:
 	void Swap(size_t left, size_t right);
 	
