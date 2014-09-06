@@ -5,7 +5,7 @@
 
 class GL3ParticleRenderer : public ParticleRenderer {
 public:
-	virtual ~GLParticleRenderer();
+	virtual ~GL3ParticleRenderer();
 	
 	virtual void Generate(const ParticleSystem& ps) override;
 	virtual void Destroy(const ParticleSystem& ps) override;
