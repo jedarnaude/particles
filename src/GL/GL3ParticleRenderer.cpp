@@ -1,21 +1,38 @@
 #include "GL3ParticleRenderer.h"
+#include "GLSL3ParticleShaders.cpp"
+#include "GLUtils.h"
 #include "ParticleSystem.h"
+#include "glm/ext.hpp"
 
 #define BUFFER_OFFSET(i) ((char *)NULL + (i))
 
 GL3ParticleRenderable::GL3ParticleRenderable(const ParticleSystem& ps)
 	: vao(0)
 	, vbo(0)
-	, program(0)
 	, vertices(new Vertex[ps.GetParticles().size])
 	, ps(ps) {
 }
 
 GL3ParticleRenderer::GL3ParticleRenderer() {
 	// Shaders
+	GLuint vertex	= CompileShader(GL_VERTEX_SHADER, vertex_point_sprite);
+	GLuint fragment = CompileShader(GL_FRAGMENT_SHADER, fragment_point_sprite);
+	if (vertex == 0 || fragment == 0) {
+		return;
+	}
+	
+	program = LinkShader(vertex, fragment, [](GLuint program) {
+		glBindAttribLocation(program, 0, "aPosition");
+		glBindAttribLocation(program, 1, "aColor");
+		
+		glBindFragDataLocation(program, 0, "oFragColor");
+	});
 }
 
 GL3ParticleRenderer::~GL3ParticleRenderer() {
+	if (program) {
+		glDeleteProgram(program);
+	}
 }
 
 ParticleRenderable* GL3ParticleRenderer::Generate(const ParticleSystem& ps) {
@@ -33,11 +50,12 @@ ParticleRenderable* GL3ParticleRenderer::Generate(const ParticleSystem& ps) {
 	glGenBuffers(1, &render->vbo);
 	glBindBuffer(GL_ARRAY_BUFFER, render->vbo);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(GL3ParticleRenderable::Vertex) * particles.size, nullptr, GL_STREAM_DRAW);
-	glEnableVertexAttribArray(0);
 
 	// Vertex attribs
+	glEnableVertexAttribArray(0);
+	glEnableVertexAttribArray(1);
 	glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, sizeof(GL3ParticleRenderable::Vertex), BUFFER_OFFSET(0));
-	glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, sizeof(GL3ParticleRenderable::Vertex), BUFFER_OFFSET(sizeof(glm::vec4)));
+	glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, sizeof(GL3ParticleRenderable::Vertex), BUFFER_OFFSET(sizeof(glm::vec4)));
  
 	return render;
 }
@@ -50,7 +68,7 @@ void GL3ParticleRenderer::Destroy(ParticleRenderable* renderable) {
 	}
 }
 
-void GL3ParticleRenderer::Update(ParticleRenderable* renderable) {
+void GL3ParticleRenderer::Update(ParticleRenderable* renderable, View& view) {
 	GL3ParticleRenderable* render = static_cast<GL3ParticleRenderable*>(renderable);
 	auto& particles = render->ps.GetParticles();
 
@@ -66,14 +84,22 @@ void GL3ParticleRenderer::Update(ParticleRenderable* renderable) {
 		}
 		glUnmapBuffer(GL_ARRAY_BUFFER);
 	}
+	
+	// Update model matrix
+	glm::mat4 mat;
+	render->model = glm::translate(mat, render->ps.transform.position);
 }
 
-void GL3ParticleRenderer::Render(ParticleRenderable* renderable) {
+void GL3ParticleRenderer::Render(ParticleRenderable* renderable, View& view) {
 	GL3ParticleRenderable* render = static_cast<GL3ParticleRenderable*>(renderable);
 
 	auto count = render->ps.GetParticles().count;
 	
 	if (count > 0) {
+		glPointSize(20);
+		glUseProgram(program);
+		
+		glUniformMatrix4fv(0, 1, GL_FALSE, glm::value_ptr(view.projection * view.view * render->model));
 		glBindVertexArray(render->vao);
 		glDrawArrays(GL_POINTS, 0, static_cast<GLsizei>(count));
 	}

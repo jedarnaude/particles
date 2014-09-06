@@ -12,9 +12,9 @@ struct GL3ParticleRenderable : public ParticleRenderable {
 		glm::vec4 color;
 	};
 
+	glm::mat4 model;
 	GLuint vao;
 	GLuint vbo;
-	GLuint program;
 	std::unique_ptr<Vertex[]> vertices;
 	
 	const ParticleSystem& ps;
@@ -29,9 +29,10 @@ public:
 	
 	virtual ParticleRenderable* Generate(const ParticleSystem& ps) override;
 	virtual void Destroy(ParticleRenderable* renderable) override;
-	virtual void Update(ParticleRenderable* renderable) override;
-	virtual void Render(ParticleRenderable* renderable) override;
+	virtual void Update(ParticleRenderable* renderable, View& view) override;
+	virtual void Render(ParticleRenderable* renderable, View& view) override;
 	
 private:
 	std::list<GL3ParticleRenderable> renderables_;
+	GLuint program;
 };
