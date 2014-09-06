@@ -13,11 +13,10 @@ void ParticleEmitter::Add(std::unique_ptr<ParticleGenerator>&& generator) {
 	generators_.push_back(std::move(generator));
 }
 
-float ParticleEmitter::Rate(float rate) {
+void ParticleEmitter::SetRate(float rate) {
 	rate_ = rate;
-	return rate;
 }
 
-float ParticleEmitter::Rate() {
+float ParticleEmitter::GetRate() {
 	return rate_;
 }

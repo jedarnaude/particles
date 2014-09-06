@@ -21,8 +21,8 @@ public:
 	
 	void Add(std::unique_ptr<ParticleGenerator>&& generator);
 
-	float Rate(float rate);
-	float Rate();
+	void SetRate(float rate);
+	float GetRate();
 	
 private:
 	std::vector<std::unique_ptr<ParticleGenerator>> generators_;
