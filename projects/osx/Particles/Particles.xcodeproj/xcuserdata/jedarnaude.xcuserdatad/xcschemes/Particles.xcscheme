@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ADBBEA4719BB32930058A909"
-               BuildableName = "particles"
+               BlueprintIdentifier = "ADBBEA7B19BB4BC20058A909"
+               BuildableName = "libparticles.a"
                BlueprintName = "particles"
                ReferencedContainer = "container:particles.xcodeproj">
             </BuildableReference>
@@ -32,8 +32,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ADBBEA4719BB32930058A909"
-            BuildableName = "particles"
+            BlueprintIdentifier = "ADBBEA7B19BB4BC20058A909"
+            BuildableName = "libparticles.a"
             BlueprintName = "particles"
             ReferencedContainer = "container:particles.xcodeproj">
          </BuildableReference>
@@ -51,8 +51,8 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ADBBEA4719BB32930058A909"
-            BuildableName = "particles"
+            BlueprintIdentifier = "ADBBEA7B19BB4BC20058A909"
+            BuildableName = "libparticles.a"
             BlueprintName = "particles"
             ReferencedContainer = "container:particles.xcodeproj">
          </BuildableReference>
@@ -69,8 +69,8 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ADBBEA4719BB32930058A909"
-            BuildableName = "particles"
+            BlueprintIdentifier = "ADBBEA7B19BB4BC20058A909"
+            BuildableName = "libparticles.a"
             BlueprintName = "particles"
             ReferencedContainer = "container:particles.xcodeproj">
          </BuildableReference>

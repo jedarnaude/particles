@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FCC821BB-305C-4924-89D1-88BF0A5C8614</string>
+	<key>IDESourceControlProjectName</key>
+	<string>particles</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4E09FEBF-1653-477B-9F32-E7C424AD5C27</key>
+		<string>ssh://github.com/jedarnaude/particles.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>projects/osx/particles/particles.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4E09FEBF-1653-477B-9F32-E7C424AD5C27</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/jedarnaude/particles.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4E09FEBF-1653-477B-9F32-E7C424AD5C27</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4E09FEBF-1653-477B-9F32-E7C424AD5C27</string>
+			<key>IDESourceControlWCCName</key>
+			<string>particles</string>
+		</dict>
+	</array>
+</dict>
+</plist>

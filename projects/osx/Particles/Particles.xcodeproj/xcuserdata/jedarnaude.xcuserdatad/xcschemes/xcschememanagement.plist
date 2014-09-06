@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>particles.sample.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>particles.test.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>particles.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +23,21 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>ADBBEA4719BB32930058A909</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ADBBEA6519BB457B0058A909</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ADBBEA7B19BB4BC20058A909</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ADBBEA8319BB4BD70058A909</key>
 		<dict>
 			<key>primary</key>
 			<true/>

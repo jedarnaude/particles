@@ -7,13 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ADBBEA5819BB33370058A909 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEA5619BB33370058A909 /* main.cpp */; };
-		ADBBEA5A19BB341B0058A909 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBEA5919BB341B0058A909 /* SDL2.framework */; };
-		ADBBEA5C19BB345C0058A909 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBEA5B19BB345C0058A909 /* OpenGL.framework */; };
+		ADBBEA7319BB46730058A909 /* ParticleDataTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEA7119BB46730058A909 /* ParticleDataTest.cpp */; };
+		ADBBEA7619BB49F50058A909 /* libgtest_main.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBEA7419BB49F50058A909 /* libgtest_main.a */; };
+		ADBBEA7719BB49F50058A909 /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBEA7519BB49F50058A909 /* libgtest.a */; };
+		ADBBEA8D19BB4BE90058A909 /* ParticleData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEA5E19BB3B7E0058A909 /* ParticleData.cpp */; };
+		ADBBEA8E19BB4BEC0058A909 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADBBEA5619BB33370058A909 /* main.cpp */; };
+		ADBBEA8F19BB4BF90058A909 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBEA5919BB341B0058A909 /* SDL2.framework */; };
+		ADBBEA9019BB4BFC0058A909 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBEA5B19BB345C0058A909 /* OpenGL.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		ADBBEA9219BB4C490058A909 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADBBEA4019BB32930058A909 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADBBEA7B19BB4BC20058A909;
+			remoteInfo = particles;
+		};
+		ADBBEA9419BB4C4D0058A909 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADBBEA4019BB32930058A909 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADBBEA7B19BB4BC20058A909;
+			remoteInfo = particles;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		ADBBEA4619BB32930058A909 /* CopyFiles */ = {
+		ADBBEA6419BB457B0058A909 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		ADBBEA8219BB4BD70058A909 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -25,20 +55,43 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		ADBBEA4819BB32930058A909 /* particles */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = particles; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBBEA5619BB33370058A909 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		ADBBEA5919BB341B0058A909 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		ADBBEA5919BB341B0058A909 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = /Library/Frameworks/SDL2.framework; sourceTree = "<absolute>"; };
 		ADBBEA5B19BB345C0058A909 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		ADBBEA5D19BB35E60058A909 /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Context.h; sourceTree = "<group>"; };
+		ADBBEA5E19BB3B7E0058A909 /* ParticleData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleData.cpp; sourceTree = "<group>"; };
+		ADBBEA5F19BB3B7E0058A909 /* ParticleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleData.h; sourceTree = "<group>"; };
+		ADBBEA6619BB457B0058A909 /* particles.test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = particles.test; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADBBEA7119BB46730058A909 /* ParticleDataTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleDataTest.cpp; sourceTree = "<group>"; };
+		ADBBEA7419BB49F50058A909 /* libgtest_main.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest_main.a; path = ../../../extern/bin/gtest/libgtest_main.a; sourceTree = "<group>"; };
+		ADBBEA7519BB49F50058A909 /* libgtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest.a; path = ../../../extern/bin/gtest/libgtest.a; sourceTree = "<group>"; };
+		ADBBEA7C19BB4BC20058A909 /* libparticles.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libparticles.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADBBEA8419BB4BD70058A909 /* particles.sample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = particles.sample; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		ADBBEA4519BB32930058A909 /* Frameworks */ = {
+		ADBBEA6319BB457B0058A909 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADBBEA5C19BB345C0058A909 /* OpenGL.framework in Frameworks */,
-				ADBBEA5A19BB341B0058A909 /* SDL2.framework in Frameworks */,
+				ADBBEA7619BB49F50058A909 /* libgtest_main.a in Frameworks */,
+				ADBBEA7719BB49F50058A909 /* libgtest.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADBBEA7919BB4BC20058A909 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADBBEA8119BB4BD70058A909 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADBBEA8F19BB4BF90058A909 /* SDL2.framework in Frameworks */,
+				ADBBEA9019BB4BFC0058A909 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,18 +101,20 @@
 		ADBBEA3F19BB32930058A909 = {
 			isa = PBXGroup;
 			children = (
-				ADBBEA5B19BB345C0058A909 /* OpenGL.framework */,
-				ADBBEA5919BB341B0058A909 /* SDL2.framework */,
+				ADBBEA9119BB4C0F0058A909 /* libraries */,
+				ADBBEA4919BB32930058A909 /* Products */,
 				ADBBEA5519BB32EB0058A909 /* include */,
 				ADBBEA5419BB32E10058A909 /* src */,
-				ADBBEA4919BB32930058A909 /* Products */,
+				ADBBEA6119BB3DDD0058A909 /* test */,
 			);
 			sourceTree = "<group>";
 		};
 		ADBBEA4919BB32930058A909 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ADBBEA4819BB32930058A909 /* particles */,
+				ADBBEA6619BB457B0058A909 /* particles.test */,
+				ADBBEA7C19BB4BC20058A909 /* libparticles.a */,
+				ADBBEA8419BB4BD70058A909 /* particles.sample */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +124,8 @@
 			children = (
 				ADBBEA5619BB33370058A909 /* main.cpp */,
 				ADBBEA5D19BB35E60058A909 /* Context.h */,
+				ADBBEA5E19BB3B7E0058A909 /* ParticleData.cpp */,
+				ADBBEA5F19BB3B7E0058A909 /* ParticleData.h */,
 			);
 			name = src;
 			path = ../../../src;
@@ -82,16 +139,64 @@
 			path = ../../../include;
 			sourceTree = "<group>";
 		};
+		ADBBEA6119BB3DDD0058A909 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				ADBBEA7119BB46730058A909 /* ParticleDataTest.cpp */,
+			);
+			name = test;
+			path = ../../../test;
+			sourceTree = "<group>";
+		};
+		ADBBEA9119BB4C0F0058A909 /* libraries */ = {
+			isa = PBXGroup;
+			children = (
+				ADBBEA7419BB49F50058A909 /* libgtest_main.a */,
+				ADBBEA7519BB49F50058A909 /* libgtest.a */,
+				ADBBEA5B19BB345C0058A909 /* OpenGL.framework */,
+				ADBBEA5919BB341B0058A909 /* SDL2.framework */,
+			);
+			name = libraries;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		ADBBEA7A19BB4BC20058A909 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		ADBBEA4719BB32930058A909 /* particles */ = {
+		ADBBEA6519BB457B0058A909 /* particles.test */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ADBBEA5119BB32930058A909 /* Build configuration list for PBXNativeTarget "particles" */;
+			buildConfigurationList = ADBBEA6C19BB457B0058A909 /* Build configuration list for PBXNativeTarget "particles.test" */;
 			buildPhases = (
-				ADBBEA4419BB32930058A909 /* Sources */,
-				ADBBEA4519BB32930058A909 /* Frameworks */,
-				ADBBEA4619BB32930058A909 /* CopyFiles */,
+				ADBBEA6219BB457B0058A909 /* Sources */,
+				ADBBEA6319BB457B0058A909 /* Frameworks */,
+				ADBBEA6419BB457B0058A909 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADBBEA9319BB4C490058A909 /* PBXTargetDependency */,
+			);
+			name = particles.test;
+			productName = particles.test;
+			productReference = ADBBEA6619BB457B0058A909 /* particles.test */;
+			productType = "com.apple.product-type.tool";
+		};
+		ADBBEA7B19BB4BC20058A909 /* particles */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADBBEA7D19BB4BC20058A909 /* Build configuration list for PBXNativeTarget "particles" */;
+			buildPhases = (
+				ADBBEA7819BB4BC20058A909 /* Sources */,
+				ADBBEA7919BB4BC20058A909 /* Frameworks */,
+				ADBBEA7A19BB4BC20058A909 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -99,7 +204,25 @@
 			);
 			name = particles;
 			productName = particles;
-			productReference = ADBBEA4819BB32930058A909 /* particles */;
+			productReference = ADBBEA7C19BB4BC20058A909 /* libparticles.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		ADBBEA8319BB4BD70058A909 /* particles.sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADBBEA8A19BB4BD70058A909 /* Build configuration list for PBXNativeTarget "particles.sample" */;
+			buildPhases = (
+				ADBBEA8019BB4BD70058A909 /* Sources */,
+				ADBBEA8119BB4BD70058A909 /* Frameworks */,
+				ADBBEA8219BB4BD70058A909 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADBBEA9519BB4C4D0058A909 /* PBXTargetDependency */,
+			);
+			name = particles.sample;
+			productName = particles.sample;
+			productReference = ADBBEA8419BB4BD70058A909 /* particles.sample */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -123,21 +246,52 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ADBBEA4719BB32930058A909 /* particles */,
+				ADBBEA7B19BB4BC20058A909 /* particles */,
+				ADBBEA6519BB457B0058A909 /* particles.test */,
+				ADBBEA8319BB4BD70058A909 /* particles.sample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		ADBBEA4419BB32930058A909 /* Sources */ = {
+		ADBBEA6219BB457B0058A909 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADBBEA5819BB33370058A909 /* main.cpp in Sources */,
+				ADBBEA7319BB46730058A909 /* ParticleDataTest.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADBBEA7819BB4BC20058A909 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADBBEA8D19BB4BE90058A909 /* ParticleData.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADBBEA8019BB4BD70058A909 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADBBEA8E19BB4BEC0058A909 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ADBBEA9319BB4C490058A909 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADBBEA7B19BB4BC20058A909 /* particles */;
+			targetProxy = ADBBEA9219BB4C490058A909 /* PBXContainerItemProxy */;
+		};
+		ADBBEA9519BB4C4D0058A909 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADBBEA7B19BB4BC20058A909 /* particles */;
+			targetProxy = ADBBEA9419BB4C4D0058A909 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		ADBBEA4F19BB32930058A909 /* Debug */ = {
@@ -172,9 +326,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = ../../../extern/glm;
 			};
 			name = Debug;
 		};
@@ -205,23 +364,88 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = ../../../extern/glm;
 			};
 			name = Release;
 		};
-		ADBBEA5219BB32930058A909 /* Debug */ = {
+		ADBBEA6D19BB457B0058A909 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/jedarnaude/Workspace/personal/particles/extern/bin,
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/jedarnaude/Workspace/personal/particles/extern/bin/gtest,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "../../../extern/glm ../../../extern/gmock/include ../../../extern/gmock/gtest/include ../../../include ../../../src";
+			};
+			name = Debug;
+		};
+		ADBBEA6E19BB457B0058A909 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/jedarnaude/Workspace/personal/particles/extern/bin,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/jedarnaude/Workspace/personal/particles/extern/bin/gtest,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "../../../extern/glm ../../../extern/gmock/include ../../../extern/gmock/gtest/include ../../../include ../../../src";
+			};
+			name = Release;
+		};
+		ADBBEA7E19BB4BC20058A909 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ADBBEA7F19BB4BC20058A909 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		ADBBEA8B19BB4BD70058A909 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		ADBBEA5319BB32930058A909 /* Release */ = {
+		ADBBEA8C19BB4BD70058A909 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -244,11 +468,27 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ADBBEA5119BB32930058A909 /* Build configuration list for PBXNativeTarget "particles" */ = {
+		ADBBEA6C19BB457B0058A909 /* Build configuration list for PBXNativeTarget "particles.test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ADBBEA5219BB32930058A909 /* Debug */,
-				ADBBEA5319BB32930058A909 /* Release */,
+				ADBBEA6D19BB457B0058A909 /* Debug */,
+				ADBBEA6E19BB457B0058A909 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ADBBEA7D19BB4BC20058A909 /* Build configuration list for PBXNativeTarget "particles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADBBEA7E19BB4BC20058A909 /* Debug */,
+				ADBBEA7F19BB4BC20058A909 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ADBBEA8A19BB4BD70058A909 /* Build configuration list for PBXNativeTarget "particles.sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADBBEA8B19BB4BD70058A909 /* Debug */,
+				ADBBEA8C19BB4BD70058A909 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
