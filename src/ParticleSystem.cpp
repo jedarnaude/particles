@@ -11,11 +11,14 @@ size_t STLMemory(T& obj) {
 }
 
 void ParticleEmitter::Emit(double dt, ParticleData& particles) {
-	const size_t start = particles.count;
-	const size_t end = particles.Wake(static_cast<size_t>(dt * rate));
- 
-	for (auto& generator : generators_) {
-		generator->Generate(dt, particles, start, end);
+	emit_ -= dt;
+	if (emit_ <= 0.0) {
+		size_t start = particles.count;
+		size_t end = particles.Wake(1.0 + std::floor(std::abs(emit_)));
+		emit_ = ratio_;
+		for (auto& generator : generators_) {
+			generator->Generate(dt, particles, start, end);
+		}
 	}
 }
 
@@ -23,10 +26,16 @@ void ParticleEmitter::Add(std::unique_ptr<ParticleGenerator>&& generator) {
 	generators_.emplace_back(std::move(generator));
 }
 
+void ParticleEmitter::SetRate(int rate) {
+	rate_ = rate;
+	ratio_ = 1.0 / rate;
+	emit_ = ratio_;
+}
+
 ParticleSystem::ParticleSystem(size_t max_particles) {
 	particles_.Generate(max_particles);
 }
-		
+
 void ParticleSystem::Update(double dt) {
 	for (auto& emitter : emitters_) {
 		emitter->Emit(dt, particles_);

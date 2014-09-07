@@ -22,14 +22,15 @@ public:
 
 class ParticleEmitter {
 public:
-	float rate;
-	
-public:
 	void Emit(double dt, ParticleData& particles);
 	void Add(std::unique_ptr<ParticleGenerator>&& generator);
+	void SetRate(int rate);
 
 private:
 	std::vector<std::unique_ptr<ParticleGenerator>> generators_;
+	double ratio_;
+	double emit_;
+	int rate_;
 };
 
 class ParticleSystem {
